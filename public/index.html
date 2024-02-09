@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dalle-3 Image and Prompt Generator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>DALL-E 3 Prompt Generator</h1>
+        <form id="prompt-form" class="mb-4">
+            <div class="form-group">
+                <label for="idea">Enter your idea:</label>
+                <input type="text" id="idea" class="form-control" placeholder="A cute baby cat" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Generate Prompts</button>
+        </form>
+        <button id="random-prompt-btn" class="btn btn-secondary mb-4">Generate Random Prompts</button>
+        <form id="custom-prompt-form" class="mb-4">
+            <div class="form-group">
+                <label for="custom-prompt">Or enter your own prompt:</label>
+                <input type="text" id="custom-prompt" class="form-control" placeholder="Enter your own prompt here">
+            </div>
+            <div class="form-group">
+                <label for="size">Select image size:</label>
+                <select id="image-size-for-image-form" class="form-control">
+                    <option value="1024x1024">1024x1024</option>
+                    <option value="1792x1024">1792x1024</option>
+                    <option value="1024x1792">1024x1792</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-success">Create Image from Custom Prompt</button>
+        </form>
+        <div id="prompt-container" class="mb-4"></div>
+        <form id="image-form" class="d-none">
+            <div class="form-group">
+                <label for="prompt">Select a prompt:</label>
+                <select id="prompt" class="form-control" required></select>
+            </div>
+            <div class="form-group">
+                <label for="size">Select image size:</label>
+                <select id="image-size-for-image-form" class="form-control">
+                    <option value="1024x1024">1024x1024</option>
+                    <option value="1792x1024">1792x1024</option>
+                    <option value="1024x1792">1024x1792</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-success">Create Image from Selected Prompt</button>
+        </form>
+        <div id="image-container"></div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
