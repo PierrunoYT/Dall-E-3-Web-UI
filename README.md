@@ -16,7 +16,7 @@ To set up the development environment, follow these steps:
 2. Navigate to the project directory with `cd <project-name>`.
 3. Install the required dependencies with `npm install`.
 4. Copy the `.env.example` file to a new file named `.env` and fill in the necessary environment variables.
-5. Start the application with `npm start` or `node index.js`.
+5. Start the application by running the `start_server.bat` file.
 
 ## Usage
 
