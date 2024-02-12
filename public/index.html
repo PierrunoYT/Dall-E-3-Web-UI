@@ -10,8 +10,7 @@
 <body>
     <div class="container mt-5">
         <h1>DALL-E 3 Prompt Generator</h1>
-        <!-- Adjusted form action and id -->
-        <form id="prompt-form" class="mb-4" action="someurl"><!-- add appropriate action url here -->
+        <form id="prompt-form" class="mb-4">
             <div class="form-group">
                 <label for="idea">Enter your idea:</label>
                 <input type="text" id="idea" class="form-control" placeholder="A cute baby cat" required>
@@ -19,16 +18,14 @@
             <button type="submit" class="btn btn-primary">Generate Prompts</button>
         </form>
         <button id="random-prompt-btn" class="btn btn-secondary mb-4">Generate Random Prompts</button>
-        <!-- Adjusted form action and id -->
-        <form id="custom-prompt-form" class="mb-4" action="someurl"><!-- add appropriate action url here -->
-            <div class="class-group">
+        <form id="custom-prompt-form" class="mb-4">
+            <div class="form-group">
                 <label for="custom-prompt">Or enter your own prompt:</label>
                 <input type="text" id="custom-prompt" class="form-control" placeholder="Enter your own prompt here">
             </div>
             <div class="form-group">
-                <label for="size-custom">Select image size:</label>
-                <!-- Given unique id to the select -->
-                <select id="image-size-for-custom-form" class="form-control">
+                <label for="size">Select image size:</label>
+                <select id="image-size-for-image-form" class="form-control">
                     <option value="1024x1024">1024x1024</option>
                     <option value="1792x1024">1792x1024</option>
                     <option value="1024x1792">1024x1792</option>
@@ -36,17 +33,15 @@
             </div>
             <button type="submit" class="btn btn-success">Create Image from Custom Prompt</button>
         </form>
-        <!-- Maintain the state of prompt-container -->
         <div id="prompt-container" class="mb-4"></div>
-        <!-- Corrected the image form -->
-        <form id="image-form" class="d-none" action="someurl"><!-- add appropriate action url here -->
+        <form id="image-form" class="d-none">
             <div class="form-group">
                 <label for="prompt">Select a prompt:</label>
                 <select id="prompt" class="form-control" required></select>
             </div>
             <div class="form-group">
-                <label for="size-select">Select image size:</label>
-                <select id="image-size-for-select-form" class="form-control">
+                <label for="size">Select image size:</label>
+                <select id="image-size-for-image-form" class="form-control">
                     <option value="1024x1024">1024x1024</option>
                     <option value="1792x1024">1792x1024</option>
                     <option value="1024x1792">1024x1792</option>
