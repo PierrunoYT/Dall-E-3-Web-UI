@@ -11,6 +11,7 @@ export async function generateImage(prompt, size = '1024x1024') {
 if (!validSizes.includes(size)) {
   throw new Error(`Invalid image size. Valid sizes are: ${validSizes.join(', ')}.`);
 }
+console.log(`Generating image with size: ${size}`);
 const image = await openai.images.generate({ model: "dall-e-3", prompt: prompt, n: 1, size: size });
   return image;
 }

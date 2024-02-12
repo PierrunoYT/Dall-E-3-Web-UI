@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', init);
                     const img = document.createElement('img');
                     img.src = imgData.url;
                     img.alt = 'Generated Image';
-                    img.style = 'max-width: 100%; height: auto; margin-top: 20px;';
+                    img.style = 'width: 100%; height: auto; margin-top: 20px;';
                     imageContainer.appendChild(img);
                 });
             }
